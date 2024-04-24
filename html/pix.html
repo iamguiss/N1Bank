@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Pix - KingBank</title>
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+            /* Gradiente de fundo */
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Para ocupar toda a altura da tela */
+        }
+
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        /* Outra parte */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(117, 105, 105);
+            background-color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #997b7b;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Estilos específicos para esta página */
+        main {
+            flex: 1;
+            /* Para ocupar o espaço restante verticalmente */
+            max-width: 800px;
+            /* Define a largura máxima da seção principal */
+            margin: 20px auto;
+            /* Centraliza a seção principal com uma margem externa */
+            padding: 20px;
+            /* Adiciona um preenchimento interno */
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Define uma cor de fundo */
+            border-radius: 10px;
+            /* Adiciona bordas arredondadas */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Adiciona uma sombra suave */
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .pix-info {
+            margin-bottom: 20px;
+        }
+
+        .pix-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pix-actions button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pix-actions button:hover {
+            background-color: #0056b3;
+        }
+
+        #minha-chave-pix {
+            /* display: none; */
+            /* Removido para garantir que a seção seja exibida */
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        #alterar-chave-pix {
+            color: #111;
+        }
+
+        #enviar-pix {
+            color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KingBank - Conta Pix</h1>
+        <nav>
+            <ul>
+                <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
+                    <div class="dropdown-content">
+                        <a href="saldo.html"><i class="fas fa-wallet"></i> Saldo Bancário</a>
+                        <a href="extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
+                        <a href="cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
+                        <a href="pix.html"><i class="fas fa-money-check-alt"></i> Pix</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-cog"></i> Configurações</a>
+                    <div class="dropdown-content">
+                        <a href="#minha-chave-pix">Minha Chave Pix</a>
+                        <a href="#alterar-chave-pix">Alterar Chave Pix</a>
+                        <a href="#enviar-pix">Enviar Pix</a>
+                    </div>
+                </li>
+                <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
+                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+                <li style="float:right"><a class="active" href="index.html"><i class="fas fa-sign-out-alt"></i> Sair da
+                        Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="minha-chave-pix" class="pix-info">
+            <h2>Minha Chave Pix</h2>
+            <p>Sua chave Pix atual é: <strong>KingBank@exemplo.com.br</strong></p>
+        </section>
+
+        <section id="alterar-chave-pix" class="pix-info">
+            <h2>Alterar Chave Pix</h2>
+            <form>
+                <label for="nova-chave-pix">Nova Chave Pix:</label><br>
+                <input type="text" id="nova-chave-pix" name="nova-chave-pix"
+                    placeholder="Digite sua nova chave Pix"><br><br>
+                <button type="submit">Alterar Chave Pix</button>
+            </form>
+        </section>
+
+        <section id="enviar-pix" class="pix-actions">
+            <h2>Enviar Pix</h2>
+            <button onclick="enviarPix()">Enviar Pix</button>
+        </section>
+    </main>
+
+    <script>
+        function enviarPix() {
+            // Aqui você pode adicionar a lógica para enviar um Pix
+            alert("Pix enviado com sucesso!");
+        }
+    </script>
+</body>
+
+</html>
