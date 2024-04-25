@@ -1,101 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KingBank</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="/css/sistema.css">
     <!-- Link para Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Estilo para o corpo da página */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #2980b9, #2c3e50); /* Gradiente de fundo */
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
 
-        /* Estilo para o cabeçalho */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo para o menu de navegação */
-        nav {
-            margin-top: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Estilo para o conteúdo principal */
-        main {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-        }
-    </style>
 </head>
+
 <body>
-    <header>
-        <h1>KingBank</h1>
-        <nav>
-            <ul>
-                <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
-                    <div class="dropdown-content">
-                        <a href="#"><i class="fas fa-wallet"></i> Saldo Bancário</a>
-                        <a href="extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
-                        <a href="cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
-                        <a href="#"><i class="fas fa-money-check-alt"></i> Pix</a>
-                    </div>
-                </li>
-                <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
-                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                <li style="float:right"><a class="active" href="index.html"><i class="fas fa-sign-out-alt"></i> Sair da Conta</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <nav>
+        <ul>
+            <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
+                <div class="dropdown-content">
+                    <a href="#"><i class="fas fa-wallet"></i> Saldo Bancário</a>
+                    <a href="/html/extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
+                    <a href="/html/cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
+                    <a href="#"><i class="fas fa-money-check-alt"></i> Pix</a>
+                </div>
+            </li>
+            <li><a href="/html/emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
+            <li><a href="/html/contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            <li style="float:right"><a class="active" href="index.html"><i class="fas fa-sign-out-alt"></i> Sair da
+                    Conta</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h2>Bem-vindo ao KingBank</h2>
-        <p>O KingBank é um banco fictício dedicado a oferecer serviços financeiros de alta qualidade e segurança. Fundado em 2005, nosso compromisso é com a excelência no atendimento ao cliente e na gestão responsável de seus recursos.</p>
-        <p>Nossa missão é proporcionar soluções financeiras inovadoras que ajudem nossos clientes a alcançar seus objetivos financeiros, enquanto promovemos o crescimento econômico e o desenvolvimento sustentável em nossas comunidades.</p>
-        <p>Com uma equipe dedicada de profissionais experientes e uma ampla gama de produtos e serviços, estamos aqui para ajudá-lo a prosperar em todas as áreas da sua vida financeira.</p>
+        <p>O KingBank é um banco fictício dedicado a oferecer serviços financeiros de alta qualidade e segurança.
+            Fundado em 2005, nosso compromisso é com a excelência no atendimento ao cliente e na gestão responsável de
+            seus recursos.</p>
+        <p>Nossa missão é proporcionar soluções financeiras inovadoras que ajudem nossos clientes a alcançar seus
+            objetivos financeiros, enquanto promovemos o crescimento econômico e o desenvolvimento sustentável em nossas
+            comunidades.</p>
+        <p>Com uma equipe dedicada de profissionais experientes e uma ampla gama de produtos e serviços, estamos aqui
+            para ajudá-lo a prosperar em todas as áreas da sua vida financeira.</p>
         <p>Seja bem-vindo ao KingBank, onde suas finanças reinam supremas.</p>
     </main>
 </body>
+
 </html>
