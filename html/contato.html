@@ -5,43 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - KingBank</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/extrato.css">
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>KingBank</h1>
-        <nav>
-            <ul>
-                <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
-                    <div class="dropdown-content">
-                        <a href="saldo.html"><i class="fas fa-wallet"></i> Saldo Bancário</a>
-                        <a href="extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
-                        <a href="cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
-                        <a href="#"><i class="fas fa-money-check-alt"></i> Pix</a>
-                    </div>
-                </li>
-                <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
-                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                <li style="float:right"><a class="active" href="index.html"><i class="fas fa-sign-out-alt"></i> Sair da
-                        Conta</a></li>
-            </ul>
-        </nav>
-    </header>
-    </header>
-    <div class="contact-container">
-        <h2>Entre em Contato Conosco</h2>
-        <form action="#" method="post">
-            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-            <input type="email" id="email" name="email" placeholder="Seu Email" required>
-            <input type="text" id="subject" name="subject" placeholder="Assunto" required>
-            <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
-            <input type="submit" value="Enviar Mensagem">
-        </form>
-    </div>
+
+    <nav>
+        <ul>
+            <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
+                <div class="dropdown-content">
+                    <a href="saldo.html"><i class="fas fa-wallet"></i> Saldo Bancário</a>
+                    <a href="extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
+                    <a href="cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
+                    <a href="#"><i class="fas fa-money-check-alt"></i> Pix</a>
+                </div>
+            </li>
+            <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
+            <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            <li style="float:right"><a class="active" href="index.html"><i class="fas fa-sign-out-alt"></i> Sair da
+                    Conta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contact-container">
+            <h2>Entre em Contato Conosco</h2>
+            <form action="#" method="post">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
+                <input type="submit" value="Enviar Mensagem">
+            </form>
+        </div>
+    </main>
     <footer>
         <p>&copy; 2024 KingBank. Todos os direitos reservados.</p>
     </footer>
