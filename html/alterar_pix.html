@@ -7,7 +7,8 @@
     <title>Conta Pix - KingBank</title>
     <!-- Link para Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/css/pix.css">
+    <link rel="stylesheet" href="/css/alterar_pix.css"
+    >
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                 <div class="dropdown-content">
                     <a href="pix.html">Minha Chave Pix</a>
                     <a href="alterar_pix.html">Alterar Chave Pix</a>
-                    <a href="#enviar-pix">Enviar Pix</a>
+                    <a href="enviar-pix.hmtl">Enviar Pix</a>
                 </div>
             </li>
             <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
@@ -42,17 +43,36 @@
             <h2>Minha Chave Pix</h2>
             <p>Sua chave Pix atual é: <strong id="chave-pix-atual">KingBank@exemplo.com.br</strong></p>
         </section>
-        <script>
-            // Verifica se há uma chave Pix salva no armazenamento local ao carregar a página
-            window.onload = function () {
-                var chavePixSalva = localStorage.getItem("chavePix");
-                if (chavePixSalva) {
-                    document.getElementById("chave-pix-atual").innerText = chavePixSalva;
-                }
-            };
 
-        </script>
-        </script>
+        <section id="alterar-chave-pix" class="pix-info">
+            <h2>Alterar Chave Pix</h2>
+            <form id="form-alterar-chave">
+                <label for="nova-chave-pix">Nova Chave Pix:</label><br>
+                <input type="text" id="nova-chave-pix" name="nova-chave-pix"
+                    placeholder="Digite sua nova chave Pix"><br><br>
+                <button type="button" onclick="alterarChavePix()">Alterar Chave Pix</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Verifica se há uma chave Pix salva no armazenamento local ao carregar a página
+        window.onload = function() {
+            var chavePixSalva = localStorage.getItem("chavePix");
+            if (chavePixSalva) {
+                document.getElementById("chave-pix-atual").innerText = chavePixSalva;
+            }
+        };
+
+        function alterarChavePix() {
+            var novaChavePix = document.getElementById("nova-chave-pix").value;
+            document.getElementById("chave-pix-atual").innerText = novaChavePix;
+            // Salva a nova chave Pix no armazenamento local
+            localStorage.setItem("chavePix", novaChavePix);
+            alert("Chave Pix alterada com sucesso!");
+            // Aqui você pode adicionar a lógica para enviar a nova chave Pix para o servidor, se necessário
+        }
+    </script>
 </body>
 
 </html>

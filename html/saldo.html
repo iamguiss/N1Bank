@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,16 @@
         /* Estilo para o corpo da página */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #2980b9, #2c3e50); /* Gradiente de fundo */
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+            /* Gradiente de fundo */
             margin: 0;
             padding: 0;
             color: #fff;
             text-align: center;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Para ocupar toda a altura da tela */
+            min-height: 100vh;
+            /* Para ocupar toda a altura da tela */
         }
 
         header {
@@ -83,6 +86,7 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
         /* Estilos específicos para esta página */
         main {
             max-width: 800px;
@@ -92,60 +96,64 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: justify;
-            
+
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             text-align: center;
         }
+
         .balance-info {
             margin-bottom: 20px;
             color: #111;
         }
+
         .balance-amount {
             font-size: 24px;
             font-weight: bold;
             color: #007bff;
         }
-       #extrato{
-        color: #111;
-       }
 
-       #extrato{
-        color: #111;
-       }
+        #extrato {
+            color: #111;
+        }
+
+        #extrato {
+            color: #111;
+        }
     </style>
 </head>
-<body>
-    <header>
-        <h1>KingBank</h1>
-        <nav>
-            <ul>
-                <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
-                    <div class="dropdown-content">
-                        <a href="saldo.html"><i class="fas fa-wallet"></i> Saldo Bancário</a>
-                        <a href="extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
-                        <a href="cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
-                        <a href="#"><i class="fas fa-money-check-alt"></i> Pix</a>
-                    </div>
-                </li>
-                <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
-                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                <li style="float:right"><a class="active" href="index.html"><i class="fas fa-sign-out-alt"></i> Sair da
-                        Conta</a></li>
-            </ul>
-        </nav>
-    </header>
 
-   
+<body>
+    <nav>
+        <ul>
+            <li><a href="sistema.html"><i class="fas fa-user"></i> Minha Conta</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-money-bill"></i> Pagamentos</a>
+                <div class="dropdown-content">
+                    <a href="saldo.html"><i class="fas fa-wallet"></i> Saldo Bancário</a>
+                    <a href="extrato.html"><i class="fas fa-receipt"></i> Extrato</a>
+                    <a href="cartao.html"><i class="fas fa-credit-card"></i> Cartões</a>
+                    <a href="pix.html"><i class="fas fa-money-check-alt"></i> Pix</a>
+                </div>
+            </li>
+            <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
+            <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+            <li style="float:right"><a class="active" href="/index.html"><i class="fas fa-sign-out-alt"></i> Sair da
+                    Conta</a></li>
+        </ul>
+    </nav>
+
+
+
     <main>
         <section class="balance-info">
             <h2>Saldo Bancário</h2>
             <p>Seu saldo atual é:</p>
             <p class="balance-amount">R$ 5.000,00</p>
         </section>
-        
+
         <section id="extrato" class="transaction-list">
             <h2>Últimas Transações</h2>
             <div class="transaction">
@@ -172,4 +180,5 @@
         </section>
     </main>
 </body>
+
 </html>

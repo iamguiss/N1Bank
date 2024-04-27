@@ -1,0 +1,202 @@
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    /* Gradiente de fundo */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Para ocupar toda a altura da tela */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+/* Outra parte */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(117, 105, 105);
+    background-color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #997b7b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Cor escura com transparência */
+    z-index: 1;
+    /* Garante que a camada escura fique atrás do main */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    position: fixed;
+    /* Para garantir que o z-index funcione corretamente */
+    z-index: 2;
+    /* Garante que o main fique sobre a camada escura */
+    max-width: 800px;
+    /* Alterado para melhorar a legibilidade */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Move o elemento de volta metade do seu próprio tamanho */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.pix-actions button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    /* Tamanho da fonte */
+}
+
+.pix-actions button:hover {
+    background-color: #0056b3;
+}
+
+.pix-actions button:focus {
+    outline: none;
+    /* Remove a borda de foco padrão */
+}
+
+.pix-actions button:active {
+    transform: translateY(1px);
+    /* Efeito de clique */
+}
+
+
+#minha-chave-pix {
+    /* display: none; */
+    /* Removido para garantir que a seção seja exibida */
+    color: #111;
+    margin-bottom: 20px;
+}
+
+#alterar-chave-pix {
+    color: #111;
+}
+
+#enviar-pix {
+    color: #111;
+}
+
+/* Estilo para os inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    /* Cor de fundo */
+    font-size: 16px;
+    /* Tamanho da fonte */
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    /* Tamanho da fonte */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:focus,
+button:focus {
+    outline: none;
+    /* Remove a borda de foco padrão */
+}
+
+input[type="submit"]:active,
+button:active {
+    transform: translateY(1px);
+    /* Efeito de clique */
+}
+
+label{
+    color: white;
+
+}
