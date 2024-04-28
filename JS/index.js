@@ -22,9 +22,13 @@ function LimparCampo() {
 
 function TrocaSenha()
 {
-    window.location.href = "html/trocasenha.html";
+    
 
     user = document.getElementById('nome').value == '';
     password = document.getElementById('senha').value == '';
     email = document.getElementById('email').value == '';
+}
+function mostrarLogin() {
+    var loginForm = document.getElementById("loginContainer");
+    loginForm.classList.toggle("show-login");
 }

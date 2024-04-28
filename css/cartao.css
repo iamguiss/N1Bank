@@ -110,11 +110,11 @@ main {
     /* Garante que o main fique sobre a camada escura */
     max-width: 800px;
     /* Alterado para melhorar a legibilidade */
-    top: 50%;
+    top: 55%;
     /* Centraliza verticalmente */
-    left: 50%;
+    left: 45%;
     /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, -50%);
     /* Move o elemento de volta metade do seu próprio tamanho */
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
