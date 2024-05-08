@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saldo Bancário</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="/JS/index.js"></script>
     <!-- Link para Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
@@ -90,13 +91,12 @@
         /* Estilos específicos para esta página */
         main {
             max-width: 800px;
-            margin: 0 auto;
+            margin: auto; /* Para centralizar */
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: justify;
-
         }
 
         h1,
@@ -122,6 +122,9 @@
         #extrato {
             color: #111;
         }
+        .transaction-info{
+            color: black;
+        }
     </style>
 </head>
 
@@ -145,40 +148,59 @@
         </ul>
     </nav>
 
-
-
-    <main>
+    <main id="conteudoPrincipal">
         <section class="balance-info">
             <h2>Saldo Bancário</h2>
             <p>Seu saldo atual é:</p>
-            <p class="balance-amount">R$ 5.000,00</p>
+            <p class="balance-amount" id="saldo">R$ 5.000,00</p>
         </section>
-
-        <section id="extrato" class="transaction-list">
-            <h2>Últimas Transações</h2>
-            <div class="transaction">
-                <span class="date">01/03/2024</span>
-                <span class="description">Depósito</span>
-                <span class="amount">R$ 1.000,00</span>
-            </div>
-            <div class="transaction">
-                <span class="date">05/03/2024</span>
-                <span class="description">Saque</span>
-                <span class="amount">- R$ 500,00</span>
-            </div>
-            <div class="transaction">
-                <span class="date">05/03/2024</span>
-                <span class="description">Transferência</span>
-                <span class="amount">- R$ 200,00</span>
-            </div>
-            <div class="transaction">
-                <span class="date">07/03/2024</span>
-                <span class="description">Pagamento de Conta</span>
-                <span class="amount">- R$ 300,00</span>
-            </div>
-            <!-- Adicione mais transações conforme necessário -->
+    
+        <section id="transacoes" class="transaction-info">
+            <h2>Transações</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="listaTransacoes">
+                    <!-- Aqui serão inseridas as transações -->
+                </tbody>
+            </table>
         </section>
     </main>
-</body>
+    
+    <script>
+        // Array estático de transações bancárias
+        var transacoes = [
+            { data: '2024-05-01', descricao: 'Depósito', valor: 1000.00 },
+            { data: '2024-05-02', descricao: 'Pagamento', valor: -500.00 },
+            { data: '2024-05-05', descricao: 'Saque', valor: -200.00 }
+        ];
+    
+        // Função para preencher a tabela com as transações
+        function exibirTransacoes() {
+            var listaTransacoes = document.getElementById('listaTransacoes');
+    
+            // Limpa o conteúdo atual da lista
+            listaTransacoes.innerHTML = '';
+    
+            // Itera sobre as transações e adiciona linhas à tabela
+            transacoes.forEach(function(transacao) {
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transacao.data}</td>
+                    <td>${transacao.descricao}</td>
+                    <td>${transacao.valor}</td>
+                `;
+                listaTransacoes.appendChild(row);
+            });
+        }
+    
+        // Chama a função para exibir as transações ao carregar a página
+        window.onload = exibirTransacoes;
+    </script>
 
 </html>

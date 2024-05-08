@@ -100,18 +100,31 @@ li a:hover:not(.active) {
 }
 
 /* Estilo para o conteúdo principal */
+/* Estilo para o conteúdo principal */
 main {
-    position: fixed; /* Para garantir que o z-index funcione corretamente */
-    z-index: 2; /* Garante que o main fique sobre a camada escura */
-    max-width: 800px; /* Alterado para melhorar a legibilidade */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Move o elemento de volta metade do seu próprio tamanho */
+    position: fixed;
+    z-index: 2;
+    width: 80%; /* Define uma largura fixa */
+    max-width: 800px; /* Limita a largura máxima */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo mais clara */
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Habilita a rolagem vertical quando necessário */
+    max-height: 80vh; /* Define a altura máxima relativa à altura da janela de visualização */
 }
+
+/* Estilo para os detalhes da transação */
+.transaction-details {
+    margin-bottom: 20px; /* Espaçamento entre as transações */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Adiciona uma linha divisória */
+    padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+
 .transaction-list {
     text-align: left; /* Ajuste para alinhar as transações à esquerda */
 }

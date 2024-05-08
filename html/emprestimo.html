@@ -7,6 +7,7 @@
     <title>Cartões - KingBank</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/css/emprestimo.css">
+    <script src="/JS/index.js"></script>
 
 </head>
 
@@ -29,36 +30,15 @@
                 Conta</a></li>
         </ul>
     </nav>
-
-
-
     <main>
         <h2>Valores para empréstimos</h2>
         <div class="card-container">
-            <div class="card">
-                <img src="/Img/cincomil.png" alt="Cartão de Débito">
-                <h3>R$ 1000 reais</h3>
-            </div>
-            <div class="card">
-                <img src="/Img/cincomil.png" alt="Cartão de Crédito">
-                <h3>R$ 2500 reais</h3>
-            </div>
-            <div class="card">
-                <img src="/Img/cincomil.png" alt="Criar Novo Cartão">
-                <h3>R$ 5000 reais</h3>
-            </div>
-            <div class="card">
-                <img src="/Img/cincomil.png" alt="Remover Cartão">
-                <h3>R$ 8000 reais</h3>
-            </div>
-            <div class="card">
-                <img src="/Img/cincomil.png" alt="Bloquear Cartão">
-                <h3>R$ 10000 reais</h3>
-            </div>
-            <div class="card">
-                <img src="/Img/cincomil.png" alt="Alterar Senha">
-                <h3>Financiamento</h3>
-            </div>
+            <button class="card" onclick="solicitarEmprestimo(1000)"><img src="/Img/cincomil.png" alt="Cartão de Débito">R$ 1000 reais</button>
+            <button class="card" onclick="solicitarEmprestimo(2500)"><img src="/Img/cincomil.png" alt="Cartão de Crédito">R$ 2500 reais</button>
+            <button class="card" onclick="solicitarEmprestimo(5000)"><img src="/Img/cincomil.png" alt="Criar Novo Cartão">R$ 5000 reais</button>
+            <button class="card" onclick="solicitarEmprestimo(8000)"><img src="/Img/cincomil.png" alt="Remover Cartão">R$ 8000 reais</button>
+            <button class="card" onclick="solicitarEmprestimo(10000)"><img src="/Img/cincomil.png" alt="Bloquear Cartão">R$ 10000 reais</button>
+            <button class="card" onclick="solicitarEmprestimo('financiamento')"><img src="/Img/cincomil.png" alt="Alterar Senha">Financiamento</button>
         </div>
     </main>
 

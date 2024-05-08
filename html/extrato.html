@@ -7,6 +7,7 @@
     <title>KingBank | Extrato</title>
     <link rel="stylesheet" type="text/css" href="/css/extrato.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
@@ -25,20 +26,43 @@
             <li><a href="emprestimo.html"><i class="fas fa-hand-holding-usd"></i> Empréstimos</a></li>
             <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
             <li style="float:right"><a class="active" href="/index.html"><i class="fas fa-sign-out-alt"></i> Sair da
-                Conta</a></li>
+                    Conta</a></li>
         </ul>
     </nav>
 
-
     <main>
-        <section>
-            <h2>Extrato Bancário</h2>
-            <div class="transaction-list" id="transactionList">
-                <!-- Aqui serão adicionadas as transações dinamicamente pelo JavaScript -->
-            </div>
+        <h2>Extrato Bancário</h2>
+        <section id="transactionList">
+            <!-- Aqui serão adicionadas as transações dinamicamente pelo JavaScript -->
         </section>
     </main>
-    
+
+    <script>
+        var transacoes = [
+            { data: '07/05/2024 10:49', valor: 500, tipo: 'Pix', descricao: 'Corte de cabelo do mês' },
+            { data: '07/05/2024 22:49', valor: 500, tipo: 'Pix', descricao: 'Guardar dinheiro' },
+            { data: '07/05/2024 21:39', valor: 500, tipo: 'Débito', descricao: 'Tênis' },
+            { data: '07/05/2024 21:39', valor: 500, tipo: 'Débito', descricao: 'Tênis' },
+            { data: '07/05/2024 21:39', valor: 500, tipo: 'Débito', descricao: 'Tênis' },
+            { data: '07/05/2024 21:39', valor: 500, tipo: 'Débito', descricao: 'Tênis' },
+            { data: '07/05/2024 21:39', valor: 500, tipo: 'Débito', descricao: 'Tênis' }
+        ];
+
+        function extratoDados() {
+            var idGrid = document.getElementById('transactionList');
+            transacoes.forEach(function (transacao) {
+                var divItem = document.createElement('div');
+                divItem.classList.add('transaction-details');
+                divItem.innerHTML = `<p>Data: ${transacao.data}</p>
+                                     <p>Valor: ${transacao.valor}</p>
+                                     <p>Tipo: ${transacao.tipo}</p>
+                                     <p>Descrição: ${transacao.descricao}</p>`;
+                idGrid.appendChild(divItem);
+            });
+        }
+
+        extratoDados();
+    </script>
 </body>
 
 </html>
